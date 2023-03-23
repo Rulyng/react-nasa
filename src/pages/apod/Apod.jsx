@@ -7,7 +7,6 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
 import "./apod.scss";
-import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useFeatch from 'react-fetch-hook'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -3,8 +3,13 @@
 
   &__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    @media (max-width: 760px){
+      justify-content: center;
+      gap: 30px;
+    }
   }
 
   &__item {
@@ -14,6 +19,8 @@
     gap: 10px;
     width: 370px;
     height: 370px;
+
+
   }
   &__img1 {
     border-radius: 160px;

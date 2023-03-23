@@ -12,6 +12,11 @@
     gap: 10px;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 610px){
+
+      flex-direction: column;
+    }
   }
 
   &__textarea > textarea {
@@ -21,6 +26,9 @@
     color: black;
     resize: none;
     outline: none;
+    @media (max-width: 460px){
+      width: 300px;;
+    }
   }
 
   &__button {
@@ -31,5 +39,8 @@
     padding: 20px;
     border-radius: 5px;
     cursor: pointer;
+    @media (max-width: 610px){
+      width: 200px;;
+    }
   }
 }

@@ -10,6 +10,11 @@
     padding: 90px 20px;
     background-color: #181b4888;
     box-shadow: -1px 1px 20px 5px rgb(6, 8, 61);
+
+    @media (max-width: 610px){
+        padding: 58px 10px;
+        text-align: center;
+    }
 }
 }
 
@@ -19,6 +24,14 @@
     font-size: 35px;
     font-weight: 700;
     box-shadow: 0px 1px 46px -9px rgb(69, 8, 249);  
+    @media (max-width: 610px){
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
 }
 
 .roverreview__title{

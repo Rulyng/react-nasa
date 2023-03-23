@@ -37,10 +37,9 @@ img{
 .title{
     font-weight: 700;
     font-size: 30px;
+    @media (max-width: 610px){
+        font-size: 25px;
+        font-weight: 500;
+    }
 }
 
-// @media (max-width: 610px){
-//     .navbar{
-//         display: none;
-//     }
-//     }

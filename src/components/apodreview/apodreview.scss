@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+
+    @media (max-width: 610px){
+      justify-content: center;
+    }
   }
 
   &__item {
