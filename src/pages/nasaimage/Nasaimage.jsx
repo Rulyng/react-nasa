@@ -3,7 +3,6 @@ import { useRef } from 'react';
 import Footer from '../../common/footer/Footer';
 import Navbar from '../../common/navbar/Navbar';
 import Maillist from '../../components/maillist/Maillist';
-import noimage from '../../img/noimg.jpg'
 import './nasaimage.scss'
 
 const Nasaimage = () => {
