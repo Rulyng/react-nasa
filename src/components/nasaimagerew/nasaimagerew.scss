@@ -1,33 +1,32 @@
-.nasaimagerew{
-    margin: 40px 0;
+.nasaimagerew {
+  margin: 40px 0;
 
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        gap:20px;
-      }
-    
-      &__item {
-        width: 350px;
-        height: 350px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        overflow: hidden;
-        background-color: black;
-        padding: 8px;
-      }
-    
-      &__img {
-        height: 80%;
-      }
-    
-      &__img-title {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
 
-padding: 10px 0;
-color: rgb(154, 42, 252);
-      }
+  &__item {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    background-color: black;
+    padding: 8px;
+  }
+
+  &__img {
+    height: 80%;
+  }
+
+  &__img-title {
+    padding: 10px 0;
+    color: rgb(154, 42, 252);
+  }
 }
