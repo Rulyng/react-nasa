@@ -3,6 +3,7 @@ import Header from "../../common/header/Header";
 import Navbar from "../../common/navbar/Navbar";
 import Apodreview from "../../components/apodreview/Apodreview";
 import Maillist from "../../components/maillist/Maillist";
+import Nasaimagerew from "../../components/nasaimagerew/Nasaimagerew";
 import Roverreview from "../../components/roverreview/Roverreview";
 import "./home.scss";
 
@@ -20,6 +21,8 @@ const Home = () => {
           <Apodreview />
           <h3 className="title roverreview__title">Explore mars</h3>
           <Roverreview />
+          <h3 className="title roverreview__title">NASA image library</h3>
+          <Nasaimagerew/>
         </div>
         <Maillist />
         <Footer />
