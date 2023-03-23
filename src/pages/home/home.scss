@@ -1,0 +1,27 @@
+.wrap-home{
+    background-image: url(../../img/bg-hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home{
+
+&__container{
+    padding: 90px 20px;
+    background-color: #181b4888;
+    box-shadow: -1px 1px 20px 5px rgb(6, 8, 61);
+}
+}
+
+.about__title{
+    width: fit-content;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight: 700;
+    box-shadow: 0px 1px 46px -9px rgb(69, 8, 249);  
+}
+
+.roverreview__title{
+    margin-top: 80px;
+}
+

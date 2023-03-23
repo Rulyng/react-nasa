@@ -1,0 +1,157 @@
+.wrap-rovers {
+  // background-image: url(../../img/rover-bg.jpg);
+  background: linear-gradient( rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.7) ), url(../../img/rover-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.rovers {
+
+  &__hero {
+    padding: 180px 0;
+    text-align: center;
+    line-height: 42px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f1ebff;
+  }
+  &__hero-title {
+    font-size: 38px;
+  }
+  &__hero-desc {
+    font-size: 24px;
+  }
+
+  &__description {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__search-text {
+    font-size: 30px;
+  }
+
+  &__search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input-radio-row {
+    display: flex;
+    gap: 23px;
+    margin-bottom: 20px;
+  }
+
+  &__radio-inp {
+    margin-right: 10px;
+    transform: scale(2);
+  }
+
+  &__input-label {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  &__input-date {
+    color: black;
+    outline: none;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  &__search-btn{
+    padding: 10px 80px;
+  }
+
+  &__input-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+&__result{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+&__item{
+  height: 300px;
+  width: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+&__img{
+  object-fit: cover;
+  height: 100%;
+  border-radius: 150px;
+  border: 8px double silver;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+&__bigphoto{
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(33, 18, 43, 0.893);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+&__bigphoto-wrap{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+&__bigphoto-img{
+  object-fit: cover;
+width: 70%;
+height: 70vh;
+border-radius: 10px;
+border: 2px solid silver;
+}
+
+&__bigphoto-desc{
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+&__close{
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+&__arrow{
+  margin: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+}

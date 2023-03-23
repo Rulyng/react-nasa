@@ -1,0 +1,70 @@
+.wrap-apodphoto{
+background-image: url(../../img/earth1.jpg);
+background-size: cover;
+background-attachment: fixed;
+height: 100vh;
+}
+
+.apodphoto{
+&__container{
+    padding-top: 90px;
+}
+
+&__wrap{
+   display: flex;
+   gap: 20px;
+}
+
+&__search{
+    flex: 1;
+    background-color: silver;
+    padding: 10px;
+    border-radius: 5px;
+    position: sticky;
+    top: 10px;
+    max-height: 411px;
+}
+
+&__search-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+&__search-item>label{
+    font-size: 18px;
+}
+
+&__search-item>span{
+height: 30px;
+padding: 5px;
+background-color: #fff;
+color: black;
+display: flex;
+align-items: center;cursor: pointer;
+}
+
+&__search-title{
+    font-size: 20px;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+&__one-date {
+    color: blue;
+    background-color: white;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+&__result{
+    flex: 3;
+}
+
+
+
+}

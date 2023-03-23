@@ -1,0 +1,215 @@
+.wrap-apod {
+  background-image: url(../../img/earth2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.apod {
+
+  &__hero {
+    padding: 180px 0;
+    text-align: center;
+    line-height: 42px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f1ebff;
+  }
+
+  &__hero-title {
+    font-size: 38px;
+  }
+  &__hero-desc {
+    font-size: 24px;
+  }
+  
+  &__desc{
+    max-width: 600px;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   margin-bottom: 30px;
+  }
+  &__text {
+    font-size: 24px;
+  }
+
+  &__search-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  &__search-item{
+    height: 60px;
+    width: 450px;
+    border: 2px solid lightblue;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    margin-bottom: 150px;
+    font-weight: bold;
+    position: relative;
+    font-size: 19px;
+  }
+
+  &__search-date{
+    color: blue;
+    cursor: pointer;
+  }
+
+  &__btn{
+    font-size: 22px;
+    padding: 5px 10px;
+    border-radius: 0;
+  }
+
+  &__date{
+    position: absolute;
+    top: 50px;
+    color: blue;
+
+  }
+
+  &__date .rdrMonthPicker>select option{
+    color: blue;
+  }
+
+  &__date .rdrYearPicker>select option{
+    color: blue;
+  }
+
+  &__one-date {
+width: 100%;
+color: blue;
+background-color: white;
+text-align: center;
+font-size: 19px;
+font-weight: bold;
+padding: 10px;
+border: none;
+cursor: pointer;
+  }
+
+  &__range-result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__rangephoto-container{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 410px;
+  height: 410px;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 1px 46px -9px rgb(7, 19, 241);  
+  }
+
+  &__rangephoto-desc {
+    padding: 10px 10px 0;
+
+  }
+
+  &__rangephoto-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__rangephoto-date {
+    font-size: 18px;
+    color: rgb(146, 18, 225);
+  }
+
+  &__rangephoto-img {
+    object-fit: cover;
+    height: 280px;
+    cursor: zoom-in;
+  }
+
+  &__photo-big{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.893);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__photo-wrap{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+  }
+
+   &__close{
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  &__rangephoto-wrap-img{
+object-fit: cover;
+width: 70%;
+height: 60vh;
+  }
+
+  &__rangephoto-wrap-title{
+    padding-top: 30px;
+    box-shadow: 0px 1px 46px -9px rgba(149,9,230,1);  
+  }
+  
+ &__rangephoto-wrap-date{
+  color: rgb(169, 42, 248);
+  font-size: 20px;
+ }
+ 
+ &__rangephoto-wrap-text{
+width: 70%;
+ }
+
+ &__arrow-l{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 40px;
+  cursor: pointer;
+ }
+
+ &__arrow-r{
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  font-size: 40px;
+  cursor: pointer;
+ }
+
+}
+
+.rovers__bigphoto-desc i{
+  color: rgb(145, 137, 137);
+}
+
+.react-datepicker__month-select, .react-datepicker__year-select {
+  color: blue;
+}
+.react-datepicker__month-select option, .react-datepicker__year-select option {
+  color: blue;
+}

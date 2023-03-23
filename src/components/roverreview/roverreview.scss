@@ -1,0 +1,30 @@
+.roverreview {
+  margin: 40px 0;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 370px;
+    height: 370px;
+  }
+  &__img1 {
+    border-radius: 160px;
+    border: 8px double silver;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__item-img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
