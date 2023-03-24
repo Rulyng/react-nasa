@@ -73,9 +73,6 @@ const Apod = () => {
              <FontAwesomeIcon icon={faCircleArrowLeft} className="apod__arrow-l"
              onClick={()=> handleMove("l")} />
           <div className="apod__photo-wrap">
-         
-            
-
             <h2 className="apod__rangephoto-wrap-title">
               {out[photoNum].title}
             </h2>
@@ -141,7 +138,6 @@ const Apod = () => {
                       maxDate={new Date()}
                     />
                   )}
-                  <button className="apod__btn">Search range</button>
                 </div>
               </div>
             </div>

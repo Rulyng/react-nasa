@@ -13,24 +13,47 @@
     max-width: 800px;
     margin: 0 auto;
     color: #f1ebff;
+    @media (max-width: 610px){
+      padding: 80px 0;
+      line-height: 33px;
+    }
   }
 
   &__hero-title {
     font-size: 38px;
+    @media (max-width: 610px){
+      font-size: 28px;
+    }
   }
   &__hero-desc {
     font-size: 24px;
+    @media (max-width: 610px){
+      font-size: 21px;
+    }
   }
   
   &__desc{
+    padding-left: 10px;
     max-width: 600px;
    display: flex;
    flex-direction: column;
    gap: 15px;
    margin-bottom: 30px;
+  
   }
   &__text {
     font-size: 24px;
+    @media (max-width: 610px){
+      font-size: 20px;
+    }
+  }
+
+  &__search-title{
+    font-size: 25px;
+    box-shadow: 0px 1px 46px -9px rgb(7, 7, 241); 
+    @media (max-width: 400px){
+      font-size: 22px;
+    }
   }
 
   &__search-items{
@@ -42,7 +65,7 @@
   }
   &__search-item{
     height: 60px;
-    width: 450px;
+    width: 350px;
     border: 2px solid lightblue;
     background-color: #fff;
     display: flex;
@@ -54,11 +77,18 @@
     font-weight: bold;
     position: relative;
     font-size: 19px;
+    @media (max-width: 400px){
+      width: 250px;
+    }
   }
 
   &__search-date{
     color: blue;
     cursor: pointer;
+    @media (max-width: 400px){
+      font-size: 16px;
+    }
+    
   }
 
   &__btn{
@@ -114,7 +144,10 @@ cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 1px 46px -9px rgb(7, 19, 241);  
+  @media (max-width: 460px){
+    width: 320px;
   }
+}
 
   &__rangephoto-desc {
     padding: 10px 10px 0;
@@ -166,7 +199,7 @@ cursor: pointer;
   }
 
   &__rangephoto-wrap-img{
-object-fit: cover;
+object-fit: contain;
 width: 70%;
 height: 60vh;
   }
@@ -183,6 +216,9 @@ height: 60vh;
  
  &__rangephoto-wrap-text{
 width: 70%;
+@media (max-width: 530px){
+  font-size: 13px;
+ }
  }
 
  &__arrow-l{

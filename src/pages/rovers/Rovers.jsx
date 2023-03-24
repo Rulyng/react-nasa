@@ -61,7 +61,7 @@ const Rovers = () => {
          className="rovers__close" 
          onClick={()=> setOpenPhoto(false)} />
         <div className="rovers__bigphoto-wrap">
-        <FontAwesomeIcon icon={faCircleArrowLeft} className="rovers__arrow"
+        <FontAwesomeIcon icon={faCircleArrowLeft} className="rovers__arrow-l"
         onClick={()=> handleMove("l")} />
         <img src={out[roverNum].img_src} alt="img" className="rovers__bigphoto-img"/>
         <div className="rovers__bigphoto-desc">
@@ -70,7 +70,7 @@ const Rovers = () => {
              <h4 className="rovers__bigphoto-date name"><i>Earth date: </i>  {out[roverNum].earth_date}</h4>
              <h4 className="rovers__bigphoto-date name"><i>Launch date: </i> {out[roverNum].rover.launch_date}</h4>
         </div>
-        <FontAwesomeIcon icon={faCircleArrowRight} className="rovers__arrow"
+        <FontAwesomeIcon icon={faCircleArrowRight} className="rovers__arrow-r"
         onClick={()=> handleMove("r")} />
         </div>
         
@@ -141,8 +141,8 @@ const Rovers = () => {
                   </label>
                 </div>
                 <div className="rovers__input-text-container">
-                  <h2 className="title">Enter the date</h2>
-                  <h3>Format: YYYY-MM-DD</h3>
+                  <h2 className="rovers__input-subtitle">Enter the date</h2>
+                  <h3 className="rovers__input-format">Format: YYYY-MM-DD</h3>
                   <input
                
                   defaultValue="2015-10-22"

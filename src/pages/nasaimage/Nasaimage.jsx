@@ -12,11 +12,11 @@ const Nasaimage = () => {
 
   useEffect(() => {
     fetch(
-      `https://images-api.nasa.gov/search?q=${inpValue.current.value}&page_size=6`
+      `https://images-api.nasa.gov/search?q=${inpValue.current.value}&page_size=2`
     )
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         let newArr = [];
         data.collection.items.map((item) => newArr.push(item));
         setOut(newArr);
@@ -25,14 +25,13 @@ const Nasaimage = () => {
 
       const handle =  useCallback(() => {
         fetch(
-      `https://images-api.nasa.gov/search?q=${inpValue.current.value}&page_size=6`
+      `https://images-api.nasa.gov/search?q=${inpValue.current.value}&page_size=9`
       )
         .then((response) => response.json())
         .then((data) => {
           let newArr = [];
           data.collection.items.map((item) => newArr.push(item));
           setOut(newArr);
-          console.log(newArr);
         });
     }, []);
 
@@ -53,7 +52,7 @@ const Nasaimage = () => {
           <div className="container nasaimage__container">
             <div className="nasaimage__search-row">
               <input
-                defaultValue="saturn"
+                defaultValue="nebula"
                 ref={inpValue}
                 className="nasaimage__inp"
                 type="text"
@@ -79,7 +78,7 @@ const Nasaimage = () => {
                       {item.data[0].title}
                     </h4>
                     <h5 className="nasaimage__image-date">
-                      {item.data[0].date_created}
+                      {item.data[0].date_created.slice(0, 10)}
                     </h5>
                   </div>
                 </div>
