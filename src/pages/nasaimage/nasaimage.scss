@@ -22,6 +22,9 @@
     
       &__hero-title {
         font-size: 38px;
+        @media (max-width: 610px){
+          font-size: 25px;
+        }
       }
       &__hero-desc {
         font-size: 24px;
@@ -34,6 +37,9 @@
         align-items: center;
         gap: 10px;
         padding-bottom: 20px;
+        @media (max-width: 420px){
+          flex-direction: column;
+        }
       }
 
       &__inp{
@@ -50,6 +56,9 @@
         height: 50px;
         padding: 0 10px;
         cursor: pointer;
+        @media (max-width: 420px){
+          width: 290px;
+        }
       }
 
       &__result{
@@ -58,6 +67,9 @@
         justify-content: space-around;
         align-items: center;
         gap:20px;
+        @media (max-width: 380px){
+          gap:30px;
+        }
       }
 
       &__image-item{
@@ -67,15 +79,18 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        cursor: pointer;
         overflow: hidden;
         background-color: black;
+        @media (max-width: 380px){
+          width: 310px;
+        }
       }
 
       &__image-img{
         height: 250px;
         object-fit: cover;
         padding: 5px;
+        cursor: zoom-in;
       }
 
       &__image-desc{

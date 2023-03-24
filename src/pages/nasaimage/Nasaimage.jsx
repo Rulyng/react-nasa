@@ -72,7 +72,6 @@ const Nasaimage = () => {
                     alt="img"
                     width="200"
                   />
-               
                   <div className="nasaimage__image-desc">
                     <h4 className="nasaimage__image-title">
                       {item.data[0].title}
