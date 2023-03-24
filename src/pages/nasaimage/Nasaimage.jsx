@@ -1,3 +1,5 @@
+import { faCircleArrowLeft, faCircleArrowRight, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useRef } from 'react';
 import Footer from '../../common/footer/Footer';
@@ -7,7 +9,8 @@ import './nasaimage.scss'
 
 const Nasaimage = () => {
   const [out, setOut] = useState([]);
-  // const [inp, setInp] = useState("saturn");
+  
+
   let inpValue = useRef();
 
   useEffect(() => {
@@ -16,7 +19,7 @@ const Nasaimage = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         let newArr = [];
         data.collection.items.map((item) => newArr.push(item));
         setOut(newArr);
@@ -35,11 +38,51 @@ const Nasaimage = () => {
         });
     }, []);
 
+    const [openPhoto, setOpenPhoto] = useState(false);
+    const [photoNum, setPhotoNum] = useState(0);
+
+    function handleOpen(index){
+      setPhotoNum(index);
+      setOpenPhoto(true);
+    }
+
+    function handleMove (direction){
+      let newphotoNum;
+      if(direction === "l"){
+        newphotoNum = photoNum === 0 ? out.length-1 : photoNum - 1
+      } else{
+        newphotoNum = photoNum === out.length-1 ? 0 : photoNum + 1
+      }
+      setPhotoNum(newphotoNum)
+    }
 
   return (
     <div className="nasaimage-wrap">
-      <Navbar />
+      {openPhoto && (
+      <div className="nasaimage__photo-big">
+        <FontAwesomeIcon icon={faCircleXmark} 
+        className="nasaimage__close"
+        onClick={() => {
+          setOpenPhoto(false);
+        }}
+        />
+        <FontAwesomeIcon icon={faCircleArrowLeft} 
+        className="nasaimage__arrow-l"
+        onClick={()=> handleMove("l")}  />
+              <div className="nasaimage__photo-wrap">
+              <img src={out[photoNum].links[0].href} alt="img" className="nasaimage__photo-img"/>
+                <div className="nasaimage__photo-text">
+                  <h4 className="nasaimage__photo-title">{out[photoNum].data[0].title}</h4>
+                  <h4 className="nasaimage__photo-date"><b>Date: </b>{out[photoNum].data[0].date_created.slice(0, 10)}</h4>
+                  <h5 className="nasaimage__photo-description"> <b>Explanation: </b>{out[photoNum].data[0].description}</h5>
+                </div>
 
+              </div>
+              <FontAwesomeIcon icon={faCircleArrowRight} 
+              className="nasaimage__arrow-r"
+              onClick={()=> handleMove("r")}/>
+      </div>)}
+      <Navbar />
       <div className="nasaimage">
         <section className="nasaimage__hero">
           <h2 className="nasaimage__hero-title"> NASA Image Library</h2>
@@ -71,6 +114,7 @@ const Nasaimage = () => {
                     src={item.links[0].href}
                     alt="img"
                     width="200"
+                    onClick={() => handleOpen(index)}
                   />
                   <div className="nasaimage__image-desc">
                     <h4 className="nasaimage__image-title">
