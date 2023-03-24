@@ -15,7 +15,7 @@ const Nasaimage = () => {
 
   useEffect(() => {
     fetch(
-      `https://images-api.nasa.gov/search?q=${inpValue.current.value}&page_size=2`
+      `https://images-api.nasa.gov/search?q=${inpValue.current.value}&page_size=12`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -28,7 +28,7 @@ const Nasaimage = () => {
 
       const handle =  useCallback(() => {
         fetch(
-      `https://images-api.nasa.gov/search?q=${inpValue.current.value}&page_size=9`
+      `https://images-api.nasa.gov/search?q=${inpValue.current.value}&page_size=12`
       )
         .then((response) => response.json())
         .then((data) => {

@@ -81,6 +81,7 @@
         flex-direction: column;
         gap: 15px;
         padding: 0 10px;
+        
         @media (max-width: 1130px){
           height: 40vh;
           // max-width: 800px;
@@ -97,6 +98,11 @@
               max-width: 310px;
     
                }
+        }
+
+        &__photo-text::-webkit-scrollbar{
+          width: 0px;
+          background: rgba(255, 255, 255, 0.0);
         }
         
         &__photo-desc{
