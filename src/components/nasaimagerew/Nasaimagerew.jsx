@@ -8,7 +8,7 @@ const Nasaimagerew = () => {
       <div className="nasaimagerew__items">
         <div className="nasaimagerew__item">
           <img
-            src="http://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001738/GSFC_20171208_Archive_e001738~orig.jpg"
+            src="https://stsci-opo.org/STScI-01EVSRDH0A23KPHYSZJY4KA159.png"
             alt="img"
             className="nasaimagerew__img"
           />
@@ -18,7 +18,7 @@ const Nasaimagerew = () => {
         </div>
         <div className="nasaimagerew__item">
           <img
-            src="http://images-assets.nasa.gov/image/a-sky-view-of-earth-from-suomi-npp_16611703184_o/a-sky-view-of-earth-from-suomi-npp_16611703184_o~orig.jpg"
+            src="https://images.immediate.co.uk/production/volatile/sites/25/2021/08/01-Apollo-16-Earth-e8af703-e1630404532976.jpg?quality=90&resize=980,654"
             alt="img"
             className="nasaimagerew__img"
           />
@@ -28,7 +28,7 @@ const Nasaimagerew = () => {
         </div>
         <div className="nasaimagerew__item">
           <img
-            src="http://images-assets.nasa.gov/image/PIA17666/PIA17666~orig.jpg"
+            src="https://www.dlr.de/content/en/images/2014/1/philae-landing-on-comet_13339.jpg?__blob=normal&v=14"
             alt="img"
             className="nasaimagerew__img"
           />

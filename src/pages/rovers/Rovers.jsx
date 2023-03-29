@@ -1,11 +1,16 @@
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
-import { faCircleArrowLeft, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { useRef } from "react";
 import { useCallback } from "react";
 import Footer from "../../common/footer/Footer";
 import Navbar from "../../common/navbar/Navbar";
+import Cartbigrover from "../../components/cartbigrover/Cartbigrover";
+import Cartrover from "../../components/cartrover/Cartrover";
 import Maillist from "../../components/maillist/Maillist";
 import "./rovers.scss";
 
@@ -23,7 +28,6 @@ const Rovers = () => {
   }
 
   const handleRover = useCallback(() => {
-
     fetch(
       `https://api.nasa.gov/mars-photos/api/v1/rovers/${selectValue}/photos?earth_date=${inpValueDate.current.value}&camera=NAVCAM&page=1&api_key=${key}`
     )
@@ -33,48 +37,46 @@ const Rovers = () => {
         data.photos.map((item) => newarr.push(item));
         setOut(newarr);
       });
-     
   }, [selectValue, inpValueDate]);
 
-  function handleOpen(i){
+  function handleOpen(i) {
     setRoverNum(i);
-    setOpenPhoto(true)
+    setOpenPhoto(true);
   }
 
-  function handleMove (direction){
+  function handleMove(direction) {
     let newRoverNum;
-    if(direction === "l"){
-      newRoverNum = roverNum === 0 ? out.length-1 : roverNum - 1
-    } else{
-      newRoverNum = roverNum === out.length-1 ? 0 : roverNum + 1
+    if (direction === "l") {
+      newRoverNum = roverNum === 0 ? out.length - 1 : roverNum - 1;
+    } else {
+      newRoverNum = roverNum === out.length - 1 ? 0 : roverNum + 1;
     }
 
-    setRoverNum(newRoverNum)
-
+    setRoverNum(newRoverNum);
   }
 
   return (
     <div className="wrap-rovers">
-       {openPhoto && <div className="rovers__bigphoto">
-       
-         <FontAwesomeIcon icon={faCircleXmark} 
-         className="rovers__close" 
-         onClick={()=> setOpenPhoto(false)} />
-        <div className="rovers__bigphoto-wrap">
-        <FontAwesomeIcon icon={faCircleArrowLeft} className="rovers__arrow-l"
-        onClick={()=> handleMove("l")} />
-        <img src={out[roverNum].img_src} alt="img" className="rovers__bigphoto-img"/>
-        <div className="rovers__bigphoto-desc">
-        <h3 className="rovers__bigphoto-rover name"> <i>Rover name: </i> {out[roverNum].rover.name}</h3>
-             <h4 className="rovers__bigphoto-title name"><i>Sol: </i>  {out[roverNum].sol}</h4>
-             <h4 className="rovers__bigphoto-date name"><i>Earth date: </i>  {out[roverNum].earth_date}</h4>
-             <h4 className="rovers__bigphoto-date name"><i>Launch date: </i> {out[roverNum].rover.launch_date}</h4>
+      {openPhoto && (
+        <div className="rovers__bigphoto">
+          <FontAwesomeIcon
+            icon={faCircleXmark}
+            className="rovers__close"
+            onClick={() => setOpenPhoto(false)}
+          />
+          <FontAwesomeIcon
+            icon={faCircleArrowLeft}
+            className="rovers__arrow-l"
+            onClick={() => handleMove("l")}
+          />
+          <Cartbigrover item={out[roverNum]} />
+          <FontAwesomeIcon
+            icon={faCircleArrowRight}
+            className="rovers__arrow-r"
+            onClick={() => handleMove("r")}
+          />
         </div>
-        <FontAwesomeIcon icon={faCircleArrowRight} className="rovers__arrow-r"
-        onClick={()=> handleMove("r")} />
-        </div>
-        
-        </div>}
+      )}
       <Navbar />
       <div className="rovers">
         <section className="rovers__hero">
@@ -144,8 +146,7 @@ const Rovers = () => {
                   <h2 className="rovers__input-subtitle">Enter the date</h2>
                   <h3 className="rovers__input-format">Format: YYYY-MM-DD</h3>
                   <input
-               
-                  defaultValue="2015-10-22"
+                    defaultValue="2015-10-22"
                     type="text"
                     className="rovers__input-date"
                     ref={inpValueDate}
@@ -158,15 +159,7 @@ const Rovers = () => {
             </div>
             <div className="rovers__result">
               {out.map((item, i) => (
-                <div key={i} className="rovers__item">
-                  <img
-                    onClick={() => handleOpen(i)}
-                    className="rovers__img"
-                    src={item.img_src}
-                    alt="img"
-                  />
-                  <div className="rovers__item-desc"></div>
-                </div>
+                <Cartrover i={i} item={item} onClick={() => handleOpen(i)} />
               ))}
             </div>
           </div>

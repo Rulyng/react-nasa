@@ -22,7 +22,7 @@ const Home = () => {
           <h3 className="title roverreview__title">Explore mars</h3>
           <Roverreview />
           <h3 className="title roverreview__title">NASA image library</h3>
-          <Nasaimagerew/>
+          <Nasaimagerew />
         </div>
         <Maillist />
         <Footer />
