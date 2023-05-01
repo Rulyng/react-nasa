@@ -28,7 +28,7 @@ const Nasaimagerew = () => {
         </div>
         <div className="nasaimagerew__item">
           <img
-            src="https://www.dlr.de/content/en/images/2014/1/philae-landing-on-comet_13339.jpg?__blob=normal&v=14"
+            src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2014/09/rosetta_and_its_target_comet/14772820-1-eng-GB/Rosetta_and_its_target_comet.jpg"
             alt="img"
             className="nasaimagerew__img"
           />

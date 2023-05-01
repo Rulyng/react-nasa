@@ -34,7 +34,7 @@ const Apod = () => {
   let rangeStartDay = `${format(date[0].startDate, "yyyy-MM-dd")}`;
   let rangeEndDay = `${format(date[0].endDate, "yyyy-MM-dd")}`;
 
-  const { data } = useFeatch(
+  const {data} = useFeatch(
     `https://api.nasa.gov/planetary/apod?api_key=${key}&start_date=${rangeStartDay}&end_date=${rangeEndDay}`
   );
 
